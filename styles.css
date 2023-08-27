@@ -18,7 +18,7 @@ header {
     border: 1px solid #ddd;
     margin: 10px;
     padding: 10px;
-    background-color: #f9f9f9; /* Cor de fundo dos quadrados */
+   color: #87CEEB;
 }
     
    
@@ -31,15 +31,9 @@ background-color:#fff ;
 
 
 .restaurante h2 {
-    color: #333;
-    color: #333;
+   color: #87CEEB;
 }
 
-
-.restaurante p {
-    color: #333;
-   
-}
 
 
 main {
