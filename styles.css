@@ -7,7 +7,7 @@ body, h1, h2, p {
 
 header {
   background-color: #333;
-    color: red;
+    color: pink;
     text-align: center;
     padding: 20px;
     border-bottom: 5px solid #87CEEB; /* Cor da borda no cabeçalho */
@@ -16,13 +16,20 @@ header {
 }
 
 .restaurante {
-   border: 2px dashed #FF69B4; /* Adiciona uma borda tracejada de 2px com cor #ddd */
+   border: 2px dashed #FF69B4; 
         margin-bottom: 20px;
         padding: 10px;
         background-color: #fff;
     
   
 }
+.container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
     
    
 padding: 10px;
