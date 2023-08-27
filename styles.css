@@ -17,7 +17,9 @@ header {
 .restaurante {
     border: 1px solid #ddd;
     margin: 10px;
-    border: 5px solid #00a8e8; /* Cor da borda na seção de restaurantes */
+    padding: 10px;
+    background-color: #f9f9f9; /* Cor de fundo dos quadrados */
+}
     
    
 padding: 10px;
@@ -30,13 +32,13 @@ background-color:#fff ;
 
 .restaurante h2 {
     color: #333;
-    border: 5px solid #00a8e8; /* Cor da borda na seção de restaurantes */
+    color: #333;
 }
 
 
 .restaurante p {
     color: #333;
-    border: 5px solid #00a8e8; /* Cor da borda na seção de restaurantes */
+   
 }
 
 
