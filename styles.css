@@ -1,1 +1,23 @@
+p{
+  background-color: indianred;
+  color: cornflowerblue;
+  border-width: 1px;
+    border-style: solid; 
+    border-color:  blue;
+    width: 500px;
+  
+}
+.parte1{
+   border-width: 1px;
+   border-style: solid; 
+   border-color:  blue;
+   width: 500px;
+
+}
+div{
+   border-width: 5px;
+   border-style: dotted; 
+   border-color: pink;
+   width: 500px;
+}
 
