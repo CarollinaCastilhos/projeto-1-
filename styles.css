@@ -15,11 +15,10 @@ header {
 }
 
 .restaurante {
-    border: 1px solid #0000FF;
-    margin: 10px;
-    padding: 10px;
-    border-style: solid; 
-   border-color:  blue;
+   border: 2px dashed #FF69B4; /* Adiciona uma borda tracejada de 2px com cor #ddd */
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #fff;
     
   
 }
