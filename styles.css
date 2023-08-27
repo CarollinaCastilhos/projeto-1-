@@ -1,23 +1,40 @@
-p{
-  background-color: indianred;
-  color: cornflowerblue;
-  border-width: 1px;
-    border-style: solid; 
-    border-color:  blue;
-    width: 500px;
-  
+/* Reset de estilos para remover margens e preenchimentos padrão */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
 }
-.parte1{
-   border-width: 1px;
-   border-style: solid; 
-   border-color:  blue;
-   width: 500px;
 
+/* Estilo para o cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
-div{
-   border-width: 5px;
-   border-style: dotted; 
-   border-color: pink;
-   width: 500px;
+
+/* Estilo para os restaurantes */
+.restaurante {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
 }
+
+/* Estilo para os títulos dos restaurantes */
+.restaurante h2 {
+    color: #333;
+}
+
+/* Estilo para as descrições dos restaurantes */
+.restaurante p {
+    color: #666;
+}
+
+/* Estilo para o corpo da página */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 
