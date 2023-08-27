@@ -20,7 +20,8 @@ header {
         margin-bottom: 20px;
         padding: 10px;
         background-color: #fff;
-     background-color: #E6E6E6; /* Cor de fundo dos quadrados */
+    padding: 10px;
+        background-color: #E6E6E6;
     
   
 }
