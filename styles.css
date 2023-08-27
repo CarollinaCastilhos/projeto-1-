@@ -1,10 +1,10 @@
-/* Reset de estilos para remover margens e preenchimentos padrão */
+
 body, h1, h2, p {
     margin: 0;
     padding: 0;
 }
 
-/* Estilo para o cabeçalho */
+
 header {
     background-color: #333;
     color: #fff;
@@ -12,7 +12,7 @@ header {
     padding: 20px;
 }
 
-/* Estilo para os restaurantes */
+
 .restaurante {
     border: 1px solid #ddd;
     margin: 10px;
@@ -20,20 +20,36 @@ header {
     background-color: #f9f9f9;
 }
 
-/* Estilo para os títulos dos restaurantes */
+
 .restaurante h2 {
     color: #333;
 }
 
-/* Estilo para as descrições dos restaurantes */
+
 .restaurante p {
     color: #666;
 }
 
-/* Estilo para o corpo da página */
+
 main {
     display: flex;
     flex-wrap: wrap;
+
+    .links-restaurante {
+    
+   
+background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    
+   
+position: absolute;
+    
+   
+bottom: 0;
+    width: 100%;
+}
     justify-content: space-around;
 }
 
