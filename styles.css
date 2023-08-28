@@ -5,15 +5,12 @@ body, h1, h2, p {
     background-color: LightPink;
 }
 
-
 header {
   background-color: #333;
     color: MediumVioletRed;
     text-align: center;
     padding: 20px;
-    border-bottom: 5px solid #87CEEB; /* cabeçalho */
-    
-   
+    border-bottom: 5px solid #87CEEB; /* cabeçalho */ 
 }
 
 .restaurante {
@@ -36,26 +33,18 @@ header {
           background-color:#fff ;
         }
     
-   
-
-
-
 .restaurante h2 {
    color: #87CEEB;
     border: 2px dashed #FF69B4; /* Adiciona uma borda tracejada  */
         margin-bottom: 20px;
         padding: 10px;
-        background-color: #fff;
-    
+        background-color: #fff;  
 }
-
-
 
 main {
     display: flex;
     
-   
-flex-wrap: wrap;
+   flex-wrap: wrap;
     justify-content: space-around;
 }
 
