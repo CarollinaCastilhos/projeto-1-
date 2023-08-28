@@ -32,20 +32,17 @@ header {
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+           padding: 10px;
+          background-color:#fff ;
         }
     
    
-padding: 10px;
-    
-   
-background-color:#fff ;
 
-}
 
 
 .restaurante h2 {
    color: #87CEEB;
-    border: 2px dashed #FF69B4; /* Adiciona uma borda tracejada de 2px com cor #ddd */
+    border: 2px dashed #FF69B4; /* Adiciona uma borda tracejada  */
         margin-bottom: 20px;
         padding: 10px;
         background-color: #fff;
