@@ -2,13 +2,13 @@
 body, h1, h2, p {
     margin: 0;
     padding: 0;
-    background-color: blue;
+    background-color: LightPink;
 }
 
 
 header {
   background-color: #333;
-    color: pink;
+    color: DeepPink;
     text-align: center;
     padding: 20px;
     border-bottom: 5px solid #87CEEB; /* Cor da borda no cabeçalho */
