@@ -1,36 +1,51 @@
-/* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
+.tabela {
+    width: 100%;
+    max-width: 10000px;
+    background-color: #000000fb;
+    border-style: solid;
+    border-color: #050505;
+    
 }
 
-h1 {
-    color: #333;
-}
-
-/* Estilos da galeria */
-.galeria {
+  .gallery {
     display: flex;
     flex-wrap: wrap;
+  }
+  .gallery img {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 110px;
+    
+}
+
+.sla{
+display:flex;
+}
+
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
+    align-items: center;
+  }
+  .modal-content {
+    max-width: 450%;
+    max-height: 800%;
+    overflow: hidden; /* Impede que a imagem se estenda além do contêiner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.foto {
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.foto img {
-    max-width: 100%;
-    height: auto;
-}
-
-.foto p {
-    margin-top: 10px;
-    color: #666;
-}
+  .modal-image {
+    max-width: 100%; /* Controla o tamanho máximo da imagem ampliada */
+    max-height: 100%; /* Controla o tamanho máximo da imagem ampliada */
+  }
