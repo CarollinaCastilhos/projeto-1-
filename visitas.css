@@ -11,13 +11,13 @@
     text-decoration: none;
 }
 
-.gallery img {
+.visita img {
     max-width: 100%;
     height: auto;
     transition: transform 0.2s ease-in-out;
 }
 
-.gallery img:hover {
+.visita img:hover {
     transform: scale(1.1); /* Efeito de escala ao passar o mouse */
 }
 
