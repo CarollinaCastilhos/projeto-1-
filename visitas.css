@@ -4,18 +4,21 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px; /* Espaçamento entre as imagens */
-    background-color: #f2f2f2;
+    background-color: EE82EE;
 }
 
 /* Estilos para as imagens na galeria */
 .gallery a {
     text-decoration: none;
+    background-color: EE82EE;
 }
 
 .gallery img {
     max-width: 100%;
     height: auto;
     transition: transform 0.2s ease-in-out;
+     background-color: C71585;
+    
 }
 
 .gallery img:hover {
@@ -40,6 +43,7 @@
 /* Estilos para o ícone de fechar no lightbox */
 .fancybox-button--close {
     font-size: 24px;
+     background-color: C71585;
 }
 
 /* Estilos para a legenda da imagem no lightbox */
@@ -47,4 +51,5 @@
     color: #fff;
     font-size: 16px;
     text-align: center;
+     background-color: C71585;
 }
