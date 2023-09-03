@@ -1,51 +1,30 @@
-.tabela {
-    width: 100%;
-    max-width: 10000px;
-    background-color: #000000fb;
-    border-style: solid;
-    border-color: #050505;
-    
+/* Estilos personalizados para a galeria Fancybox */
+.fancybox-slide {
+    background-color: #fff; /* Cor de fundo do lightbox */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra ao redor do lightbox */
+    border-radius: 5px; /* Cantos arredondados */
 }
 
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .gallery img {
-    max-width: 200px;
-    max-height: 200px;
-    margin: 10px;
+/* Estilos personalizados para os controles de navegação */
+.fancybox-button {
+    background-color: #333; /* Cor de fundo dos botões */
+    border-radius: 50%; /* Botões redondos */
+    color: #fff; /* Cor do ícone dos botões */
+    border: none; /* Remova as bordas */
+    font-size: 16px;
+    margin: 5px;
     cursor: pointer;
-    border-radius: 110px;
-    
 }
 
-.sla{
-display:flex;
+/* Estilos personalizados para o ícone de fechar */
+.fancybox-button--close {
+    background-color: red; /* Cor de fundo do botão de fechar */
+    font-size: 24px;
 }
 
-  
-  .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-  }
-  .modal-content {
-    max-width: 450%;
-    max-height: 800%;
-    overflow: hidden; /* Impede que a imagem se estenda além do contêiner */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .modal-image {
-    max-width: 100%; /* Controla o tamanho máximo da imagem ampliada */
-    max-height: 100%; /* Controla o tamanho máximo da imagem ampliada */
-  }
+/* Estilos personalizados para a legenda da imagem */
+.fancybox-caption {
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo da legenda */
+    color: #fff; /* Cor do texto da legenda */
+    padding: 10px;
+}
