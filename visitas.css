@@ -26,8 +26,8 @@
 .fancybox-slide img {
     max-width: 80%; /* Reduz a largura máxima para 80% da janela */
     max-height: 80vh; /* Reduz a altura máxima para 80% da altura da viewport */
-    margin: 0 auto; /* Centraliza horizontalmente a imagem */
-    display: block; /* Remove margens indesejadas */
+   
+   
 }
 
 
