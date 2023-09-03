@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px; /* Espaçamento entre as imagens */
-    background-color: EE82EE;
+    background-color: blue;
 }
 
 /* Estilos para as imagens na galeria */
@@ -27,13 +27,12 @@
 
 /* Estilos para o lightbox (Fancybox) */
 .fancybox-slide {
-    background-color: rgba(FF1493); /* Cor de fundo do lightbox */
+    background-color:FF1493; /* Cor de fundo do lightbox */
 }
 
 /* Estilos para os botões de controle no lightbox */
 .fancybox-button {
-    background-color: FF1493;
-    color: FF00FF;
+    background-color: pink;
     border: none;
     font-size: 18px;
     margin: 5px;
@@ -48,7 +47,7 @@
 
 /* Estilos para a legenda da imagem no lightbox */
 .fancybox-caption {
-    color: FF00FF;
+    color: Violet;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
