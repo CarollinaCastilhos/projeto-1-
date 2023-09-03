@@ -3,6 +3,8 @@
     background-color: #fff; /* Cor de fundo do lightbox */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra ao redor do lightbox */
     border-radius: 5px; /* Cantos arredondados */
+    max-width: 80%; /* Reduz a largura máxima para 80% da janela */
+    max-height: 80vh; /* Reduz a altura máxima para 80% da altura da viewport */
 }
 
 /* Estilos personalizados para os controles de navegação */
@@ -22,13 +24,7 @@
     font-size: 24px;
 }
 
-/* Estilos personalizados para as imagens no Fancybox */
-.fancybox-slide img {
-    max-width: 80%; /* Reduz a largura máxima para 80% da janela */
-    max-height: 80vh; /* Reduz a altura máxima para 80% da altura da viewport */
-   
-   
-}
+
 
 
 
