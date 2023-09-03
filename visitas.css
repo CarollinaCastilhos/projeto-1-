@@ -27,13 +27,13 @@
 
 /* Estilos para o lightbox (Fancybox) */
 .fancybox-slide {
-    background-color: rgba(0, 0, 0, 0.9); /* Cor de fundo do lightbox */
+    background-color: rgba(FF1493); /* Cor de fundo do lightbox */
 }
 
 /* Estilos para os botões de controle no lightbox */
 .fancybox-button {
-    background-color: transparent;
-    color: #fff;
+    background-color: FF1493;
+    color: FF00FF;
     border: none;
     font-size: 18px;
     margin: 5px;
@@ -48,8 +48,8 @@
 
 /* Estilos para a legenda da imagem no lightbox */
 .fancybox-caption {
-    color: #fff;
+    color: FF00FF;
     font-size: 16px;
     text-align: center;
-     background-color: C71585;
+    text-decoration: none;
 }
