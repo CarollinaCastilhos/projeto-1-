@@ -23,7 +23,7 @@ backgroundcolor- pink
     max-width: 100%;
     height: auto;
     transition: transform 0.2s ease-in-out;
-     background-color: C71585;
+     background-color: aquamarine;
     
 }
 
@@ -48,18 +48,18 @@ backgroundcolor- pink
 /* Estilos para o ícone de fechar no lightbox */
 .fancybox-button--close {
     font-size: 24px;
-     background-color: C71585;
+     background-color: pink;
 }
 
 /* Estilos para a legenda da imagem no lightbox */
 .fancybox-caption {
-    color: Violet;
-    font-size: 16px;
+   background-color: violet
+    font-size: 14px;
     text-align: center;
     text-decoration: none;
 }
 .gallery a .image-title {
        
 background-color: pink; /* Cor do texto */
-    font-size: 16px; /* Tamanho da fonte  */
+    font-size: 14px; /* Tamanho da fonte  */
 }
