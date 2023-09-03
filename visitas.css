@@ -32,12 +32,12 @@ backgroundcolor- pink
 
 /* Estilos para o lightbox (Fancybox) */
 .fancybox-slide {
-    background-color:FF1493; /* Cor de fundo do lightbox */
+    background-color:pink; /* Cor de fundo do lightbox */
 }
 
 /* Estilos para os botões de controle no lightbox */
 .fancybox-button {
-    background-color: pink;
+    background-color: Aqua;
     border: none;
     font-size: 18px;
     margin: 5px;
