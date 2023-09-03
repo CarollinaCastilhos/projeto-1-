@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px; /* Espaçamento entre as imagens */
+    background-color: #f2f2f2;
 }
 
 /* Estilos para as imagens na galeria */
