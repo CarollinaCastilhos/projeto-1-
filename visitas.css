@@ -58,8 +58,4 @@ backgroundcolor- pink
     text-align: center;
     text-decoration: none;
 }
-.gallery a .image-title {
-       
-background-color: pink; /* Cor do texto */
-    font-size: 14px; /* Tamanho da fonte  */
-}
+
