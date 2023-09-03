@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px; /* Espaçamento entre as imagens */
+     background-color: Aquamarine
    
 
 }
@@ -32,10 +33,10 @@ backgroundcolor- pink
 
 /* Estilos para o lightbox (Fancybox) */
 .fancybox-slide {
-    background-color:pink; /* Cor de fundo do lightbox */
+    background-color:pink; /* Cor de fundo da imagem ampliada */
 }
 
-/* Estilos para os botões de controle no lightbox */
+/* Estilos para os botões de controle  */
 .fancybox-button {
     background-color: Aqua;
     border: none;
@@ -58,8 +59,7 @@ backgroundcolor- pink
     text-decoration: none;
 }
 .gallery a .image-title {
-    
-   
-color: pink; /* Cor do texto */
+       
+background-color: pink; /* Cor do texto */
     font-size: 16px; /* Tamanho da fonte  */
 }
