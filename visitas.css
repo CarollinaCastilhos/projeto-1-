@@ -1,36 +1,54 @@
-/* Estilos personalizados para a galeria Fancybox */
-.fancybox-slide {
-    background-color: #fff; /* Cor de fundo do lightbox */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra ao redor do lightbox */
-    border-radius: 5px; /* Cantos arredondados */
-    max-width: 80%; /* Reduz a largura máxima para 80% da janela */
-    max-height: 80vh; /* Reduz a altura máxima para 80% da altura da viewport */
+/* Estilos para a galeria */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre as imagens */
 }
 
-/* Estilos personalizados para os controles de navegação */
+/* Estilos para as imagens na galeria */
+.gallery a {
+    text-decoration: none;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+}
+
+/* Estilos para o lightbox (Fancybox) */
+.fancybox-slide {
+    background-color: rgba(0, 0, 0, 0.9); /* Cor de fundo do lightbox */
+}
+
+/* Estilos para os botões de controle no lightbox */
 .fancybox-button {
-    background-color: #333; /* Cor de fundo dos botões */
-    border-radius: 50%; /* Botões redondos */
-    color: #fff; /* Cor do ícone dos botões */
-    border: none; /* Remova as bordas */
-    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 18px;
     margin: 5px;
     cursor: pointer;
 }
 
-/* Estilos personalizados para o ícone de fechar */
+/* Estilos para o ícone de fechar no lightbox */
 .fancybox-button--close {
-    background-color: red; /* Cor de fundo do botão de fechar */
     font-size: 24px;
 }
 
-
-
-
-
-/* Estilos personalizados para a legenda da imagem */
+/* Estilos para a legenda da imagem no lightbox */
 .fancybox-caption {
-    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo da legenda */
-    color: #fff; /* Cor do texto da legenda */
-    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
 }
+
+
+
+
+
