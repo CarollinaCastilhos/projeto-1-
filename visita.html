@@ -1,53 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Galeria de Imagens</title>
-<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-  <link rel="stylesheet" href="visitas.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria com Fancybox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="gallery">
-  <div class="sl">
-  <img src=da certooooo/img1.jfif alt="Imagem 1" onclick="openModal(this)">
-  <img src=da certooooo/img2.jfif alt="Imagem 2" onclick="openModal(this)">
-  <img src=da certooooo/img3.jfif alt="Imagem 3" onclick="openModal(this)">
- <img src=da certooooo/img4.jfif alt="Imagem 4" onclick="openModal(this)">
-  <img src=da certooooo/img5.jfif alt="Imagem 5" onclick="openModal(this)">
-  <img src=da certooooo/img6.jfif alt="Imagem 6" onclick="openModal(this)">
-  <div class="sl"></div>
-  <img src=da certooooo/img7.jfif alt="Imagem 7" onclick="openModal(this)">
- <img src=da certooooo/img8.jfif alt="Imagem 8" onclick="openModal(this)">
-  <img src=da certooooo/img9.jfif alt="Imagem 9" onclick="openModal(this)">
-  <img src=da certooooo/img10.jfif alt="Imagem 10" onclick="openModal(this)">
-  
-  <!- imagens aqui -->
-</div>
+    <div class="gallery">
+        <a data-fancybox="gallery" href="img1.jfif"><img src="foto1.jpg" alt="Foto 1"></a>
+        <a data-fancybox="gallery" href="img2.jfif"><img src="foto2.jpg" alt="Foto 2"></a>
+        <a data-fancybox="gallery" href="img3.jfif"><img src="foto3.jpg" alt="Foto 3"></a>
+       <a data-fancybox="gallery" href="img4.jfif"><img src="foto3.jpg" alt="Foto 4"></a>
+       <a data-fancybox="gallery" href="img5.jfif"><img src="foto3.jpg" alt="Foto 5"></a>
+       <a data-fancybox="gallery" href="img6.jfif"><img src="foto3.jpg" alt="Foto 6"></a>
+       <a data-fancybox="gallery" href="img7.jfif"><img src="foto3.jpg" alt="Foto 7"></a>
+       <a data-fancybox="gallery" href="img8.jfif"><img src="foto3.jpg" alt="Foto 8"></a>
+       <a data-fancybox="gallery" href="img9.jfif"><img src="foto3.jpg" alt="Foto 9"></a>
+       <a data-fancybox="gallery" href="img10.jfif"><img src="foto3.jpg" alt="Foto 10"></a>
+        <!-- Adicione mais fotos aqui -->
+    </div>
 
-<div class="modal" id="modal">
-  <span class="modal-content">
-    <img id="modal-image" src="da certooooo" alt="Imagem Ampliada">
-  </span>
-</div>
-
-<script>
-function openModal(imgElement) {
-  const modal = document.getElementById("modal");
-  const modalImage = document.getElementById("modal-image");
-
-  modalImage.src = imgElement.src;
-  modal.style.display = "flex";
-
-  modal.addEventListener("click", closeModal);
-}
-
-function closeModal() {
-  const modal = document.getElementById("modal");
-  modal.style.display = "none";
-  modal.removeEventListener("click", closeModal);
-}
-</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 </body>
 </html>
+
+
+
