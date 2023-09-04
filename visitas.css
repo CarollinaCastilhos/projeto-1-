@@ -16,6 +16,7 @@ backgroundcolor- pink
 .gallery a {
     text-decoration: none;
     background-color: EE82EE;
+      border-radius:20px;
 }
 
 .gallery img {
