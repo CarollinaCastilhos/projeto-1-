@@ -36,6 +36,40 @@ h1 {
 #playPauseButton:hover {
   background-color: #0056b3;
 }
+    #player {
+      max-width: 400px;
+      margin: 20px auto;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    #audio {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    #controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #playPauseButton, #nextButton {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    #playPauseButton:hover, #nextButton:hover {
+      background-color: #0056b3;
 
   </style>
 </head>
@@ -81,10 +115,120 @@ h1 {
     <source src="mk.mp3" type="audio/mpeg">
   </audio>
   
-  <button id="playPauseButton">Reproduzir</button>
-  <button id="nextButton">Próxima Música</button>
+  <div id="controls">
+      <button id="playPauseButton">Reproduzir</button>
+      
+      <
+<button id="nextButton">Próxima Música</button>
+    
+    </div
+
+   
+</div>
+  
+  </
+</div>
 
   <script>
+    const audio = document.getElementById('audio');
+    const playPauseButton = document.getElementById('playPause
+
+    const audio = document.getElementById('audio');
+    const playPauseButton = document.getElementById('
+
+    const audio = document.getElementById('audio');
+    const playPauseButton = document.getElementById('playPauseButton');
+    const nextButton = document.getElementById('nextButton
+
+    const audio = document.getElementById('audio');
+    const playPauseButton = document.getElementById('playPauseButton');
+    const nextButton = document.getElementById('nextButton');
+    
+    
+
+    const audio = document.getElementById('audio');
+    const playPauseButton = document.getElementById('playPauseButton');
+    const nextButton = document.getElementById('nextButton');
+    
+
+    let currentTrackIndex = 0;
+
+    function togglePlay() {
+      if (audio.paused) {
+        audio.play();
+        playPauseButton.innerText = 'Pausar';
+      } else {
+        audio.pause();
+        playPauseButton.innerText = 'Reprodu
+
+    const audio = document.getElementById('audio');
+    const playPauseButton = document.getElementById('playPauseButton');
+    const nextButton = document.getElementById('nextButton');
+    
+    // Defina uma lista de reprodução com URLs das músicas
+    const playlist = [
+      'caminho-da-musica-1.mp3',
+      'caminho-da-musica-2.mp3',
+      'caminho-da-musica-3.mp3',
+    ];
+
+    let currentTrackIndex = 0;
+
+    function togglePlay() {
+      if (audio.paused) {
+        audio.play();
+        playPauseButton.innerText = 'Pausar';
+      } else {
+        audio.pause();
+        playPauseButton.innerText = 'Reproduzir';
+      }
+    }
+
+    function playNextTrack() {
+      currentTrackIndex++;
+      if (currentTrackIndex >= playlist.length) {
+        currentTrackIndex = 0; // Volta para a primeira música quando chegar ao final da lista
+      }
+      audio.src = playlist[currentTrackIndex];
+      audio.play();
+      playPauseButton.innerText = 'P
+
+    const audio = document.getElementById('audio');
+    const playPauseButton = document.getElementById('playPauseButton');
+    const nextButton = document.getElementById('nextButton');
+    
+    // Defina uma lista de reprodução com URLs das músicas
+    const playlist = [
+      'caminho-da-musica-1.mp3',
+      'caminho-da-musica-2.mp3',
+      'caminho-da-musica-3.mp3',
+    ];
+
+    let currentTrackIndex = 0;
+
+    function togglePlay() {
+      if (audio.paused) {
+        audio.play();
+        playPauseButton.innerText = 'Pausar';
+      } else {
+        audio.pause();
+        playPauseButton.innerText = 'Reproduzir';
+      }
+    }
+
+    function playNextTrack() {
+      currentTrackIndex++;
+      if (currentTrackIndex >= playlist.length) {
+        currentTrackIndex = 0; // Volta para a primeira música quando chegar ao final da lista
+      }
+      audio.src = playlist[currentTrackIndex];
+      audio.play();
+      playPauseButton.innerText = 'Pausar';
+    }
+
+    playPauseButton.addEventListener('click', togglePlay);
+    nextButton.addEventListener('
+
     const audio = document.getElementById('audio');
     const playPauseButton = document.getElementById('playPauseButton');
     const nextButton = document.getElementById('nextButton');
