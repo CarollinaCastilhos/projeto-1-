@@ -87,7 +87,7 @@ h1 {
     const audio = document.getElementById('audio');
     const playPauseButton = document.getElementById('playPauseButton');
 
-    function togglePlay() {
+   function togglePlay() {
       if (audio.paused) {
         audio.play();
         playPauseButton.innerText = 'Pausar';
@@ -97,6 +97,19 @@ h1 {
       }
     }
 
+    function playNextTrack() {
+      currentTrackIndex++;
+      if (currentTrackIndex >= playlist.length) {
+        currentTrackIndex = 0; // Volta para a primeira música quando chegar ao final da lista
+      }
+      audio.src = playlist[currentTrackIndex];
+      audio.play();
+      playPauseButton.innerText = 'Pausar';
+    }
+
+    playPauseButton.addEventListener('click', togglePlay);
+    nextButton.addEventListener('click', playNextTrack);
+    
     playPauseButton.addEventListener('click', togglePlay);
   </script>
 </body>
