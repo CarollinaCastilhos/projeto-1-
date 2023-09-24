@@ -116,236 +116,70 @@ h1 {
   </audio>
   
   
-<div id="controls">
-      <button id="playPauseButton">Reproduzir</button>
-      
-      <
-<button id="nextButton">Próxima Música</button>
-    
-    </div
+document.addEventListener("DOMContentLoaded", function () {
+    const playPauseButton = document.getElementById("playPause");
+    const trocarMusicaButton = document.getElementById("trocarMusica");
+    let musicaAtual = 0;
+    let playing = false;
 
-   
-</div>
+    // Defina suas músicas e seus caminhos aqui
+    const musicas = [
+        "bruno.mp3",
+        "j e m.mp3",
+        "Sna Taylor Swift.mp3",
+        "jem.mp3",
+  "jm.mp3",
+  "jorge e mateus.mp3",
+  "juju.mp3",
+  "justin.mp3",
+  "magico.mp3",
+  "mk.mp3"
   
-  </
-</div>
-
-  <script>
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('playPause
-
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('
-
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('playPauseButton');
-    const nextButton = document.getElementById('nextButton
-
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('playPauseButton');
-    const nextButton = document.getElementById('nextButton');
-    
-    // Defina uma lista de reprodução com URLs das músicas
-    const playlist = [
-      'caminho-da-musica-1.mp3',
-      'caminho-da-musica-2.mp3',
-      'caminho-da-musica-3.mp
-
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('playPauseButton');
-    const nextButton = document.getElementById('nextButton');
-    
-    // Defina uma lista de reprodução com URLs das músicas
-    const playlist = [
-      'caminho-da-musica-1.mp3',
-      'caminho-da-musica-2.mp3',
-      'c
-
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('playPauseButton');
-    const nextButton = document.getElementById('nextButton');
-    
-    // Defina uma lista de reprodução com URLs das músicas
-    const playlist = [
-      'caminho-da-musica-1.mp3',
-      'caminho-da-musica-2.mp3
-
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('playPauseButton');
-    const nextButton = document.getElementById('nextButton');
-    
-    // Defina uma lista de reprodução com URLs das músicas
-    const playlist = [
-      'caminho-da-musica-1.mp3',
-      'caminho-da-musica-2
-
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('playPauseButton');
-    const nextButton = document.getElementById('nextButton');
-    
-    // Defina uma lista de reprodução com URLs das músicas
-    const playlist = [
-      'caminho-da-musica-1.mp3',
-      'caminho-da-musica-
-
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('playPauseButton');
-    const nextButton = document.getElementById('nextButton');
-    
-    // Defina uma lista de reprodução com URLs das músicas
-    const playlist = [
-      'caminho-da-musica-1.mp3',
-      'caminho-da-mus
-
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('playPauseButton');
-    const nextButton = document.getElementById('nextButton');
-    
-    // Defina uma lista de reprodução com URLs das músicas
-    const playlist = [
-      'caminho-da-musica-1.mp3',
-      'caminho-da
-
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('playPauseButton');
-    const nextButton = document.getElementById('nextButton');
-    
-    // Defina uma lista de reprodução com URLs das músicas
-    const playlist = [
-      'caminho-da-musica-1.mp3
-
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('playPauseButton');
-    const nextButton = document.getElementById('nextButton');
-    
-    // Defina uma lista de reprodução com URLs das músicas
-    const playlist = [
-      'c
-
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('playPauseButton');
-    const nextButton = document.getElementById('nextButton');
-    
-    // Defina uma lista de reprodução com URLs das músicas
-    const playlist = [
-      'caminho-da-musica-1.mp3',
-      'caminho-da-musica-2.mp3',
-      'caminho-da-musica-3.mp3',
+       
     ];
 
-    let currentTrackIndex = 0;
+    // Inicialize o player de música com a primeira música
+    const player = new Howl({
+        src: [musicas[musicaAtual]]
+    });
 
-    function togglePlay() {
-      if (audio.paused) {
-        audio.play();
-        playPauseButton.innerText = 'Pausar';
-      } else {
-        audio.pause();
-        playPauseButton.innerText = 'Reprodu
+    // Evento de trocar a música
+    trocarMusicaButton.addEventListener("click", function () {
+        // Pausa a música atual se estiver tocando
+        if (playing) {
+            player.pause();
+            playing = false;
+            playPauseButton.textContent = "Play";
+        }
 
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('playPauseButton');
-    const nextButton = document.getElementById('nextButton');
-    
-    // Defina uma lista de reprodução com URLs das músicas
-    const playlist = [
-      'caminho-da-musica-1.mp3',
-      'caminho-da-musica-2.mp3',
-      'caminho-da-musica-3.mp3',
-    ];
+        // Troca para a próxima música
+        if (musicaAtual < musicas.length - 1) {
+            musicaAtual++;
+        } else {
+            musicaAtual = 0; // Volta para a primeira música
+        }
 
-    let currentTrackIndex = 0;
+        // Atualiza a música no player e toca
+        player.src = [musicas[musicaAtual]];
+        player.play();
+        playing = true;
+        playPauseButton.textContent = "Pause";
+    });
 
-    function togglePlay() {
-      if (audio.paused) {
-        audio.play();
-        playPauseButton.innerText = 'Pausar';
-      } else {
-        audio.pause();
-        playPauseButton.innerText = 'Reproduzir';
-      }
-    }
+    // Evento de play/pause
+    playPauseButton.addEventListener("click", function () {
+        if (playing) {
+            player.pause();
+            playing = false;
+            playPauseButton.textContent = "Play";
+        } else {
+            player.play();
+            playing = true;
+            playPauseButton.textContent = "Pause";
+        }
+    });
+});
 
-    function playNextTrack() {
-      currentTrackIndex++;
-      if (currentTrackIndex >= playlist.length) {
-        currentTrackIndex = 0; // Volta para a primeira música quando chegar ao final da lista
-      }
-      audio.src = playlist[currentTrackIndex];
-      audio.play();
-      playPauseButton.innerText = 'P
 
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('playPauseButton');
-    const nextButton = document.getElementById('nextButton');
-    
-    // Defina uma lista de reprodução com URLs das músicas
-    const playlist = [
-      'justin.mp3',
-      'bruno.mp3',
-      'juju.mp3',
-    ];
-
-    let currentTrackIndex = 0;
-
-    function togglePlay() {
-      if (audio.paused) {
-        audio.play();
-        playPauseButton.innerText = 'Pausar';
-      } else {
-        audio.pause();
-        playPauseButton.innerText = 'Reproduzir';
-      }
-    }
-
-    function playNextTrack() {
-      currentTrackIndex++;
-      if (currentTrackIndex >= playlist.length) {
-        currentTrackIndex = 0; // Volta para a primeira música quando chegar ao final da lista
-      }
-      audio.src = playlist[currentTrackIndex];
-      audio.play();
-      playPauseButton.innerText = 'Pausar';
-    }
-
-    playPauseButton.addEventListener('click', togglePlay);
-    nextButton.addEventListener('
-
-    const audio = document.getElementById('audio');
-    const playPauseButton = document.getElementById('playPauseButton');
-    const nextButton = document.getElementById('nextButton');
-    
-    // Defina uma lista de reprodução com URLs das músicas
-    const playlist = [
-      'caminho-da-musica-1.mp3',
-      'caminho-da-musica-2.mp3',
-      'caminho-da-musica-3.mp3',
-    ];
-
-    let currentTrackIndex = 0;
-
-    function togglePlay() {
-      if (audio.paused) {
-        audio.play();
-        playPauseButton.innerText = 'Pausar';
-      } else {
-        audio.pause();
-        playPauseButton.innerText = 'Reproduzir';
-      }
-    }
-
-    function playNextTrack() {
-      currentTrackIndex++;
-      if (currentTrackIndex >= playlist.length) {
-        currentTrackIndex = 0; // Volta para a primeira música quando chegar ao final da lista
-      }
-      audio.src = playlist[currentTrackIndex];
-      audio.play();
-      playPauseButton.innerText = 'Pausar';
-    }
-
-    playPauseButton.addEventListener('click', togglePlay);
-    nextButton.addEventListener('click', playNextTrack);
-  </script>
-</body>
-</html>
+  
+  
