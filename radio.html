@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Player de Música</title>
+  <style>
+    /* Adicione algum estilo CSS ao seu player de música aqui */
+  </style>
+</head>
+<body>
+  <h1>Player de Música</h1>
+  <audio id="audio" controls>
+    <source src="caminho-da-sua-musica.mp3" type="audio/mpeg">
+  
+  </audio>
+  <button id="playPauseButton">Reproduzir</button>
+
+  <script>
+    const audio = document.getElementById('audio');
+    const playPauseButton = document.getElementById('playPauseButton');
+
+    function togglePlay() {
+      if (audio.paused) {
+        audio.play();
+        playPauseButton.innerText = 'Pausar';
+      } else {
+        audio.pause();
+        playPauseButton.innerText = 'Reproduzir';
+      }
+    }
+
+    playPauseButton.addEventListener('click', togglePlay);
+  </script>
+</body>
+</html>
 
