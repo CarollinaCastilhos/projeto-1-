@@ -86,18 +86,19 @@
             "musicataylor2.mp3"
         ];
 
-        let musicaAtual = 0;
+           let musicaAtual = 0;
 
         function tocarMusica() {
             player.src = musicas[musicaAtual];
             player.play();
-            playPauseButton.textContent = "Pausar";
+            playPauseButton.textContent = "⏸️"; // Troca para o símbolo de pausa quando estiver tocando
         }
 
         function pausarMusica() {
             player.pause();
-            playPauseButton.textContent = "Play";
+            playPauseButton.textContent = "▶️"; // Troca de volta para o símbolo de reprodução quando pausado
         }
+
 
         function proximaMusica() {
             if (musicaAtual < musicas.length - 1) {
