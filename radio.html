@@ -1,112 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Player de Música</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        #music-player {
-            width: 300px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        #music-list {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        #music-list li {
-            margin: 5px 0;
-        }
-
-        #music-controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        audio {
-            width: 100%;
-        }
-    </style>
 </head>
 <body>
-    <div id="music-player">
-        <h1>Player de Música</h1>
-        <ul id="music-list">
-            <li><a href="Sna Taylor Swift.mp3" onclick="playMusic(0)"> Taylor Swift</a></li>
-            <li><a href="bruno.mp3" onclick="playMusic(1)">Bruno Mars</a></li>
-            <li><a href="j e m.mp3" onclick="playMusic(2)">Jorge E Mateus</a></li>
-            <li><a href="james.mp3" onclick="playMusic(3)"> James</a></li>
-            <li><a href="jem.mp3" onclick="playMusic(4)">JORGE e MATEUS</a></li>
-            <li><a href="jm.mp3" onclick="playMusic(5)">Jorge e mateus</a></li>
-            <li><a href="jorge e mateus.mp3" onclick="playMusic(6)"> Jorge e mateus</a></li>
-            <li><a href="juju.mp3" onclick="playMusic(7)">Justin Bieber</a></li>
-            <li><a href="justin.mp3" onclick="playMusic(8)">Justin</a></li>
-            <li><a href="magico.mp3" onclick="playMusic(9)">Mágico</a></li>
-        </ul>
-        <audio id="audio" controls>
-            <source src="Sna Taylor Swift.mp3" type="audio/mpeg">
-           <source src="bruno.mp3"type="audio/mpeg">
-           <source src="j e m.mp3"type="audio/mpeg">
-           <source src="james.mp3"type="audio/mpeg">
-           <source src="jem.mp3" type="audio/mpeg">
-           <source src="jm.mp3", type="audio/mpeg">
-           <source src="jorge e mateus.mp3" type="audio/mpeg">
-           <source src="juju.mp3" type="audio/mpeg">
-           <source src="justin.mp3" type="audio/mpeg">
-           <source src="magico.mp3" type="audio/mpeg">
-        </audio>
-        <div id="music-controls">
-            <button onclick="previousMusic()">Anterior</button>
-            <button onclick="nextMusic()">Próxima</button>
-        </div>
-    </div>
+    <h1>Player de Música</h1>
+    
+    <audio id="player" controls>
+        <source src="musica/musica1.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="prevButton">Anterior</button>
+    <button id="playPauseButton">Play/Pause</button>
+    <button id="nextButton">Próxima</button>
 
     <script>
-        const audio = document.getElementById('audio');
-        const audioSource = document.getElementById('audio-source');
-        const musicList = [
-            'Sna Taylor Swift.mp3-0',
-            'bruno.mp3-1',
-            'j e m.mp3-2',
-            'james.mp3-3',
-            'jem.mp3-4',
-            'jm.mp3-5',
-            'jorge e mateus.mp3-6',
-            'juju.mp3-7',
-            'justin.mp3-8',
-            'magico.mp3-9'
+        const player = document.getElementById("player");
+        const playPauseButton = document.getElementById("playPauseButton");
+        const prevButton = document.getElementById("prevButton");
+        const nextButton = document.getElementById("nextButton");
+
+        const musicas = [
+            "musica/musica1.mp3",
+            "musica/musica2.mp3",
+            "musica/musica3.mp3",
+            "musica/musica4.mp3",
+            "musica/musica5.mp3",
+            "musica/musica6.mp3",
+            "musica/musica7.mp3",
+            "musica/musica8.mp3",
+            "musica/musica9.mp3",
+            "musica/musica10.mp3"
         ];
-        let currentMusic = 0;
 
-        function playMusic(index) {
-            currentMusic = index;
-            audioSource.src = musicList[index];
-            audio.load();
-            audio.play();
+        let musicaAtual = 0;
+
+        function tocarMusica() {
+            player.src = musicas[musicaAtual];
+            player.play();
+            playPauseButton.textContent = "Pausar";
         }
 
-        function previousMusic() {
-            if (currentMusic > 0) {
-                currentMusic--;
-                playMusic(currentMusic);
+        function pausarMusica() {
+            player.pause();
+            playPauseButton.textContent = "Play";
+        }
+
+        function proximaMusica() {
+            if (musicaAtual < musicas.length - 1) {
+                musicaAtual++;
+            } else {
+                musicaAtual = 0;
             }
+            tocarMusica();
         }
 
-        function nextMusic() {
-            if (currentMusic < musicList.length - 1) {
-                currentMusic++;
-                playMusic(currentMusic);
+        function musicaAnterior() {
+            if (musicaAtual > 0) {
+                musicaAtual--;
+            } else {
+                musicaAtual = musicas.length - 1;
             }
+            tocarMusica();
         }
+
+        playPauseButton.addEventListener("click", () => {
+            if (player.paused) {
+                tocarMusica();
+            } else {
+                pausarMusica();
+            }
+        });
+
+        nextButton.addEventListener("click", () => {
+            proximaMusica();
+        });
+
+        prevButton.addEventListener("click", () => {
+            musicaAnterior();
+        });
+
+        // Tocar a primeira música ao carregar a página
+        tocarMusica();
     </script>
 </body>
 </html>
-
