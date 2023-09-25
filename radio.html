@@ -3,165 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player de Música Estilo Spotify</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        #music-player {
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        #music-info {
-            background-color: #333333;
-            padding: 20px;
-        }
-
-        #music-info h2 {
-            font-size: 24px;
-            margin: 0;
-        }
-
-        #controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        button {
-            background-color: #1DB954;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #14a943;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Meu Player de Música</title>
 </head>
+     <style>
+         body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #232f3e;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 0;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.player-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #232f3e;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1d2633;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+}
+ </style>
 <body>
-    <div id="music-player">
-         <div id="music-info">
-        <div id="ana.mp3">
-            <p>Ana Castela</p>
-            <audio id="player" controls>
-        <source src="ana.mp3" type="audio/mpeg">
-    </audio>
-            
-            <div id="music-info">
-             <div id="bruno.mp3">
+    <div class="container">
+        <header>
+            <h1>Meu Player de Música</h1>
+        </header>
+        <main>
+            <div class="player-container">
+                <audio id="player" controls>
+                   <source src="ana.mp3" type="audio/mpeg">
+                </audio>
+                 <div id="bruno.mp3">
             <p>Bruno Mars</p>
             <audio id="player" controls>
         <source src="bruno.mp3" type="audio/mpeg">
     </audio>
-        <div id="music-info">
            <div id="j e m.mp3">
             <p>Jorge e Mateus</p>
             <audio id="player" controls>
         <source src="j e m.mp3" type="audio/mpeg">
     </audio>
-                <div id="music-info">
             <div id="jem.mp3">
             <p>Jorge e Mateus</p>
             <audio id="player" controls>
         <source src="jem.mp3" type="audio/mpeg">
     </audio>
-                 <div id="music-info">
             <div id="zé neto.mp3">
             <p>Zé neto e Cristiano</p>
             <audio id="player" controls>
         <source src="zé neto.mp3" type="audio/mpeg">
     </audio>
-                 <div id="music-info">
             <div id="zé.mp3">
             <p>zé neto e Cristiano</p>
             <audio id="player" controls>
         <source src="zé.mp3" type="audio/mpeg">
     </audio>
-                 <div id="music-info">
              <div id="juju.mp3">
             <p>Justin Bieber</p>
             <audio id="player" controls>
         <source src="juju.mp3" type="audio/mpeg">
     </audio>
-                  <div id="music-info">
              <div id="mk.mp3">
             <p>Mateus e Kauan</p>
             <audio id="player" controls>
         <source src="mk.mp3" type="audio/mpeg">
     </audio>
-                  <div id="music-info">
              <div id="Sna Taylor Swift.mp3">
             <p>Sna Taylor Swif</p>
             <audio id="player" controls>
         <source src="Sna Taylor Swift.mp3" type="audio/mpeg">
     </audio>
-                  <div id="music-info">
               <div id="musicataylor2.mp3">
             <p> Taylor Swift</p>
             <audio id="player" controls>
         <source src="musicataylor2.mp3" type="audio/mpeg">
     </audio>
-            
-        </div>
-        <div id="controls">
-            <button id="prev-button">Anterior</button>
-            <button id="play-button">Play</button>
-            <button id="next-button">Próxima</button>
-        </div>
+                
+                <div class="controls">
+                    <button id="prevButton">Anterior</button>
+                    <button id="playPauseButton">Play</button>
+                    <button id="nextButton">Próxima</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            &copy; 2023 Meu Player de Música
+        </footer>
     </div>
+    
+    <script >
+        const player = document.getElementById("player");
+const playPauseButton = document.getElementById("playPauseButton");
+const prevButton = document.getElementById("prevButton");
+const nextButton = document.getElementById("nextButton");
 
-    <script>
-       const audio = document.getElementById('audio');
-const playPauseButton = document.getElementById('playPauseButton');
-const prevButton = document.getElementById('prevButton');
-const nextButton = document.getElementById('nextButton');
-
-const musicList = [
-    'ana.mp3',
-    'bruno.mp3',
-    'j e m.mp3',  
- 
+const musicas = [
+    "ana.mp3",
+    "bruno.mp3",
+    "j e m.mp3",
+    "jem.mp3",
+    "zé neto.mp3",
+    "zé.mp3",
+    "juju.mp3",
+    "mk.mp3",
+    "Sna Taylor Swift.mp3",
+    "musicataylor2.mp3"
 ];
 
-let currentTrackIndex = 0;
+let musicaAtual = 0;
 
-function playPause() {
-    if (audio.paused) {
-        audio.play();
-        playPauseButton.innerHTML = '&#10074;&#10074;'; // Ícone de pausa
+function tocarMusica() {
+    player.src = musicas[musicaAtual];
+    player.play();
+    playPauseButton.textContent = "Pause";
+}
+
+function pausarMusica() {
+    player.pause();
+    playPauseButton.textContent = "Play";
+}
+
+function proximaMusica() {
+    if (musicaAtual < musicas.length - 1) {
+        musicaAtual++;
     } else {
-        audio.pause();
-        playPauseButton.innerHTML = '&#9658;'; // Ícone de reprodução
+        musicaAtual = 0;
     }
+    tocarMusica();
 }
 
-function nextTrack() {
-    currentTrackIndex = (currentTrackIndex + 1) % musicList.length;
-    audio.src = musicList[currentTrackIndex];
-    audio.play();
+function musicaAnterior() {
+    if (musicaAtual > 0) {
+        musicaAtual--;
+    } else {
+        musicaAtual = musicas.length - 1;
+    }
+    tocarMusica();
 }
 
-function prevTrack() {
-    currentTrackIndex = (currentTrackIndex - 1 + musicList.length) % musicList.length;
-    audio.src = musicList[currentTrackIndex];
-    audio.play();
-}
+playPauseButton.addEventListener("click", () => {
+    if (player.paused) {
+        tocarMusica();
+    } else {
+        pausarMusica();
+    }
+});
 
-playPauseButton.addEventListener('click', playPause);
-nextButton.addEventListener('click', nextTrack);
-prevButton.addEventListener('click', prevTrack);
+nextButton.addEventListener("click", () => {
+    proximaMusica();
+});
+
+prevButton.addEventListener("click", () => {
+    musicaAnterior();
+});
+
+// Tocar a primeira música ao carregar a página
+tocarMusica();
 
     </script>
 </body>
