@@ -1,141 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Player de Música</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Meu Reprodutor de Música</title>
 </head>
-     <style>
-        /* Estilos para o botão de reprodução personalizado */
-        #playPauseButton {
-            background-color: 221,160,221;
-            color: DeepPink;
-            border: none;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        #playPauseButton:hover {
-            background-color: pink;
-        }
-    </style>
+    
 <body>
-    <h1>Player de Música</h1>
-    <h3> Música 1</h3>
-    <audio id="player" controls>
-        <source src="bruno.mp3" type="audio/mpeg">
-    </audio>
-    <h3>Música 2</h3>
-      <audio id="player" controls>
-        <source src="j e m.mp3" type="audio/mpeg">
-    </audio> 
-     <h3>Música 3</h3>
-    <audio id="player" controls>
-        <source src="zé.mp3" type="audio/mpeg">
-    </audio>
-     <h3>Música 4</h3>
-    <audio id="player" controls>
-        <source src="jem.mp3" type="audio/mpeg">
-    </audio> 
-     <h3>Música 5</h3>
-    <audio id="player" controls>
-        <source src="jm.mp3" type="audio/mpeg">
-    </audio> 
-     <h3>Música 6</h3>
-    <audio id="player" controls>
-         <source src="jorge e mateus.mp3" type="audio/mpeg">
-    </audio> 
-     <h3>Música 7</h3>
-    <audio id="player" controls>
+    <div class="container">
+        <header>
+            <h1>Meu Reprodutor de Música</h1>
+            <audio id="player" controls>
         <source src="ana.mp3" type="audio/mpeg">
     </audio>
-     <h3>Música 8</h3>
-    <audio id="player" controls>
-        <source src="justin.mp3" type="audio/mpeg">
+            <audio id="player" controls>
+        <source src="bruno.mp3" type="audio/mpeg">
+        
     </audio>
-     <h3>Música 9</h3>
-      <audio id="player" controls>
+            <audio id="player" controls>
+        <source src="j e m.mp3" type="audio/mpeg">
+       
+    </audio>
+            <audio id="player" controls>
+        <source src="jem.mp3" type="audio/mpeg">
+      
+    </audio>
+            <audio id="player" controls>
+        <source src="jm.mp3" type="audio/mpeg">
+     
+    </audio>
+            <audio id="player" controls>
+        <source src="jorge e mateus.mp3" type="audio/mpeg">
+      
+    </audio>
+            <audio id="player" controls>
         <source src="zé neto.mp3" type="audio/mpeg">
-    </audio>
-     <h3>Música 10</h3>
-      <audio id="player" controls>
-        <source src="musicataylor2.mp3" type="audio/mpeg">
-    </audio>
 
-    <button id="prevButton">Anterior</button>
-    <button id="playPauseButton">|| </button>
-    <button id="nextButton">Próxima</button>
-
+    </audio>
+            <audio id="player" controls>
+        <source src="zé.mp3" type="audio/mpeg">
+        
+    </audio>
+            <audio id="player" controls>
+        <source src="justin.mp3" type="audio/mpeg">
+      
+    </audio>
+            <audio id="player" controls>
+        <source src="juju.mp3" type="audio/mpeg">
+        
+    </audio>
+        </header>
+            </div>
+            <div class="controls">
+                <button id="prevButton">Anterior</button>
+                <button id="playPauseButton">Play</button>
+                <button id="nextButton">Próxima</button>
+            </div>
+        </main>
+        <footer>
+            &copy; 2023 Meu Reprodutor de Música
+        </footer>
+    </div>
+    
     <script>
-        const player = document.getElementById("player");
         const playPauseButton = document.getElementById("playPauseButton");
-        const prevButton = document.getElementById("prevButton");
-        const nextButton = document.getElementById("nextButton");
+const prevButton = document.getElementById("prevButton");
+const nextButton = document.getElementById("nextButton");
 
-        const musicas = [
-            "bruno.mp3",
-            "Sna Taylor Swift.mp3",
-            "j e m.mp3",
-            "jem.mp3",
-            "jm.mp3",
-            "jorge e mateus.mp3",
-            "juju.mp3",
-            "justin.mp3",
-            "magico.mp3",
-            "musicataylor2.mp3"
-        ];
+let isPlaying = false;
 
-           let musicaAtual = 0;
+playPauseButton.addEventListener("click", () => {
+    isPlaying = !isPlaying;
+    if (isPlaying) {
+        playPauseButton.textContent = "Pause";
+    } else {
+        playPauseButton.textContent = "Play";
+    }
+});
 
-        function tocarMusica() {
-            player.src = musicas[musicaAtual];
-            player.play();
-            playPauseButton.textContent = "⏸️"; // Troca para o símbolo de pausa quando estiver tocando
-        }
+prevButton.addEventListener("click", () => {
+    // Adicione a lógica para reproduzir a música anterior
+});
 
-        function pausarMusica() {
-            player.pause();
-            playPauseButton.textContent = "▶️"; // Troca de volta para o símbolo de reprodução quando pausado
-        }
+nextButton.addEventListener("click", () => {
+    // Adicione a lógica para reproduzir a próxima música
+});
 
-
-        function proximaMusica() {
-            if (musicaAtual < musicas.length - 1) {
-                musicaAtual++;
-            } else {
-                musicaAtual = 0;
-            }
-            tocarMusica();
-        }
-
-        function musicaAnterior() {
-            if (musicaAtual > 0) {
-                musicaAtual--;
-            } else {
-                musicaAtual = musicas.length - 1;
-            }
-            tocarMusica();
-        }
-
-        playPauseButton.addEventListener("click", () => {
-            if (player.paused) {
-                tocarMusica();
-            } else {
-                pausarMusica();
-            }
-        });
-
-        nextButton.addEventListener("click", () => {
-            proximaMusica();
-        });
-
-        prevButton.addEventListener("click", () => {
-            musicaAnterior();
-        });
-
-        // Tocar a primeira música ao carregar a página
-        tocarMusica();
     </script>
+    
 </body>
 </html>
+
