@@ -114,71 +114,8 @@ h1 {
   <audio id="audio" controls>
     <source src="mk.mp3" type="audio/mpeg">
   </audio>
-  
-  
-document.addEventListener("DOMContentLoaded", function () {
-    const playPauseButton = document.getElementById("playPause");
-    const trocarMusicaButton = document.getElementById("trocarMusica");
-    let musicaAtual = 0;
-    let playing = false;
 
-    // Defina suas músicas e seus caminhos aqui
-    const musicas = [
-        "bruno.mp3",
-        "j e m.mp3",
-        "Sna Taylor Swift.mp3",
-        "jem.mp3",
-  "jm.mp3",
-  "jorge e mateus.mp3",
-  "juju.mp3",
-  "justin.mp3",
-  "magico.mp3",
-  "mk.mp3"
-  
-       
-    ];
 
-    // Inicialize o player de música com a primeira música
-    const player = new Howl({
-        src: [musicas[musicaAtual]]
-    });
-
-    // Evento de trocar a música
-    trocarMusicaButton.addEventListener("click", function () {
-        // Pausa a música atual se estiver tocando
-        if (playing) {
-            player.pause();
-            playing = false;
-            playPauseButton.textContent = "Play";
-        }
-
-        // Troca para a próxima música
-        if (musicaAtual < musicas.length - 1) {
-            musicaAtual++;
-        } else {
-            musicaAtual = 0; // Volta para a primeira música
-        }
-
-        // Atualiza a música no player e toca
-        player.src = [musicas[musicaAtual]];
-        player.play();
-        playing = true;
-        playPauseButton.textContent = "Pause";
-    });
-
-    // Evento de play/pause
-    playPauseButton.addEventListener("click", function () {
-        if (playing) {
-            player.pause();
-            playing = false;
-            playPauseButton.textContent = "Play";
-        } else {
-            player.play();
-            playing = true;
-            playPauseButton.textContent = "Pause";
-        }
-    });
-});
 
 
   
